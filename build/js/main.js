@@ -37,7 +37,7 @@ ymaps.ready(function() {
             iconImageHref: '../img/map-marker.svg',
             iconImageSize: [34, 40],
             cursor: 'pointer',
-            iconImageOffset: [-30, -60],
+            iconImageOffset: [-15, -30],
             balloonclose: true
         });
     myMap.behaviors.disable('scrollZoom');
@@ -50,8 +50,10 @@ $(window).on('load resize', function() {
 
     var width = $(window).width();
 
-    if ((width > '700') && (width < '1000')) {
-
+    if (width < '821') {
+        $('.map-contacts').insertAfter('.map');
+    } else {
+        $('.map-contacts').prependTo('.map .container');
     }
 
 });
