@@ -1,5 +1,8 @@
 $(function() {
 
+    $('#cascade-slider').cascadeSlider({
+
+    });
 
     $('#hamburger-icon').click(function() {
         $(this).toggleClass('active');
@@ -13,6 +16,33 @@ $(function() {
     });
 
     $('select').niceSelect();
+
+});
+
+ymaps.ready(function() {
+    var myMap = new ymaps.Map('map', {
+            center: [51.680308, 39.215684],
+            zoom: 12,
+            scrollZoom: false,
+            controls: ['zoomControl']
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        myPlacemark = new ymaps.Placemark([51.680308, 39.215684], {
+            hintContent: 'Кузовной ремонт в Воронеже',
+            balloonContent: 'Кузовной ремонт в Воронеже'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '../img/map-marker.svg',
+            iconImageSize: [34, 40],
+            cursor: 'pointer',
+            iconImageOffset: [-30, -60],
+            balloonclose: true
+        });
+    myMap.behaviors.disable('scrollZoom');
+    myMap.geoObjects
+        .add(myPlacemark)
 
 });
 
