@@ -56,4 +56,33 @@ $(window).on('load resize', function() {
         $('.map-contacts').prependTo('.map .container');
     }
 
+    if (width < '781') {
+        $('.works-slider:not(.slick-initialized)').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerMode: true,
+            arrows: false,
+            dots: false,
+            variableWidth: true,
+            asNavFor: '.works-slider__thumbs'
+        });
+
+        $('.works-slider__thumbs:not(.slick-initialized)').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.works-slider',
+            dots: false,
+            arrows: false,
+            centerMode: true,
+            focusOnSelect: true,
+            variableWidth: true
+        });
+
+
+    } else {
+        $(".works-slider.slick-initialized").slick("unslick");
+        $(".works-slider__thumbs.slick-initialized").slick("unslick");
+    }
+
 });
