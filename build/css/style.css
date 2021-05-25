@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/Montserrat-Bold.eot");
@@ -317,7 +318,9 @@ select {
   .rem:hover button {
     background: #fff; }
   .rem:hover button svg {
-    fill: #1D1954; } }
+    fill: #1D1954; }
+  .rem:hover span {
+    color: #fff; } }
 
 .header {
   padding: 35px 0 0 0;
@@ -617,7 +620,12 @@ h2 {
   border: 1px solid #D1CEED;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: 21px; }
+  border-radius: 21px;
+  transition: all .1s linear;
+  -webkit-transition: all .1s linear;
+  -moz-transition: all .1s linear;
+  -ms-transition: all .1s linear;
+  -o-transition: all .1s linear; }
   .rem b {
     display: block;
     font-weight: bold;
@@ -660,85 +668,85 @@ h2 {
   top: -81px;
   left: 686px; }
   .rem2 i {
-    bottom: -46px;
-    left: -27px; }
+    bottom: -61px;
+    left: -30px; }
 
 .rem3 {
   top: -26px;
   left: 903px; }
   .rem3 i {
-    bottom: -37px;
-    left: -203px; }
+    bottom: -41px;
+    left: -177px; }
 
 .rem4 {
   top: 65px;
   left: 1018px; }
   .rem4 i {
-    bottom: -48px;
-    left: -116px; }
+    bottom: 5px;
+    left: -202px; }
 
 .rem5 {
   top: 172px;
   left: 1029px; }
   .rem5 i {
-    bottom: -4px;
-    left: -173px; }
+    bottom: 35px;
+    left: -124px; }
 
 .rem6 {
   top: 267px;
   left: 999px; }
   .rem6 i {
-    bottom: 54px;
-    left: -186px; }
+    bottom: 29px;
+    left: -240px; }
 
 .rem7 {
   top: 338px;
   left: 790px; }
   .rem7 i {
-    bottom: 89px;
-    left: -130px; }
+    bottom: 58px;
+    left: -206px; }
 
 .rem8 {
   top: 322px;
   left: 621px; }
   .rem8 i {
-    bottom: 89px;
-    left: -127px; }
+    bottom: 58px;
+    left: -107px; }
 
 .rem9 {
   top: 345px;
   left: 344px; }
   .rem9 i {
-    bottom: 85px;
-    left: 68px; }
+    bottom: 34px;
+    left: 55px; }
 
 .rem10 {
   top: 246px;
   left: -88px; }
   .rem10 i {
-    bottom: -5px;
-    left: 76px; }
+    bottom: 67px;
+    left: 47px; }
 
 .rem11 {
   top: 40px;
   left: -27px; }
   .rem11 i {
-    bottom: 19px;
-    left: 71px; }
+    bottom: 15px;
+    left: 74px; }
 
 .rem12 {
   top: -42px;
   left: 78px; }
   .rem12 i {
-    bottom: -59px;
-    left: 62px; }
+    bottom: -35px;
+    left: 91px; }
 
 .rem13 {
   top: -95px;
   left: 284px; }
   .rem13 i {
-    bottom: -59px;
-    left: 62px; }
+    bottom: -40px;
+    left: 1px; }
 
 .map {
   position: relative;
@@ -1085,6 +1093,28 @@ h2 {
     -o-object-position: center;
        object-position: center; }
 
+.works-before::before {
+  content: 'до';
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  color: #FFFFFF;
+  position: absolute;
+  top: 15px;
+  left: 26px;
+  z-index: 3; }
+
+.works-after::after {
+  content: 'после';
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  color: #FFFFFF;
+  position: absolute;
+  top: 15px;
+  right: 26px;
+  z-index: 3; }
+
 .works-slider-box {
   display: none; }
 
@@ -1311,9 +1341,20 @@ h2 {
     overflow: hidden; }
   .vn-slider-serv .rem {
     position: static;
+    padding: 14px 28px 10px 28px;
     max-width: 210px;
     width: 100%;
-    margin: 0 15px; }
+    margin: 0 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    .vn-slider-serv .rem b {
+      display: block;
+      margin-bottom: 4px; }
   .vn-slider-serv .slick-arrow {
     position: absolute;
     top: 60%;
@@ -1429,8 +1470,7 @@ M O B I L E
   .services-item:nth-child(2n) {
     margin-right: 0; }
   .about {
-    padding: 130px 0 130px 0;
-    background-size: contain; } }
+    padding: 80px 0 80px 0; } }
 
 @media screen and (max-width: 1100px) {
   .content-info__left {
@@ -1732,25 +1772,14 @@ M O B I L E
   .rem {
     max-width: 100%;
     width: 100%;
-    padding: 19px;
+    padding: 11px 15px 11px 10px;
     margin-bottom: 20px; }
+    .rem br {
+      display: none; }
   .price {
     padding: 30px 0 0 0; }
   .price-box img {
     display: none; }
-  .about h2 {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 120%;
-    margin-bottom: 12px; }
-  .about p {
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 150%; }
-  .about {
-    padding: 92px 0 45px 0;
-    background-position: center 34px;
-    background-size: 89%; }
   .list-serv__item {
     width: 90.28%;
     padding: 0 5px 23px 0; }
@@ -1790,7 +1819,31 @@ M O B I L E
   ul {
     margin-bottom: 20px; }
   .content-info__left {
-    width: 100%; } }
+    width: 100%; }
+  .about {
+    padding: 54px 0 54px 0;
+    background-position: center top; }
+  .about-box {
+    max-width: initial;
+    width: initial;
+    margin: 0 -4px;
+    padding: 22px 14px 34px 18px; }
+  .about h2 {
+    text-align: left;
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 27px; }
+  .about-box ul.about-ul li {
+    font-size: 14px;
+    line-height: 100%;
+    margin-bottom: 20px;
+    padding: 0 0 0 35px; }
+  .about-box ul.about-ul li::before {
+    top: -3px; }
+  .works-before::before,
+  .works-after::after {
+    font-size: 14px;
+    top: 10px; } }
 
 @media screen and (max-width: 600px) {
   .footer .logo,

@@ -110,7 +110,7 @@ $(window).on('load resize', function() {
     }
 
     if (width < '641') {
-        $('div[data-img-mobile').each(function() {
+        $('[data-img-mobile').each(function() {
             var bgDesc = $(this).attr('style');
             var bgMob = $(this).attr('data-img-mobile');
             $(this).attr('style', bgMob);
@@ -118,7 +118,7 @@ $(window).on('load resize', function() {
     }
 
     if (width > '640') {
-        $('div[data-img-desc').each(function() {
+        $('[data-img-desc').each(function() {
             var bgDataDesc = $(this).attr('data-img-desc');
             $(this).attr('style', bgDataDesc);
         })

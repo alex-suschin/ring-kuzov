@@ -315,6 +315,9 @@ select {
     .rem:hover button svg {
         fill: #1D1954;
     }
+    .rem:hover span {
+        color: #fff;
+    }
 }
 
 .header {
@@ -612,6 +615,7 @@ h2 {
     border: 1px solid #D1CEED;
     box-sizing: border-box;
     border-radius: 21px;
+    @include tr1;
     b {
         display: block;
         font-weight: bold;
@@ -657,8 +661,8 @@ h2 {
     top: -81px;
     left: 686px;
     i {
-        bottom: -46px;
-        left: -27px;
+        bottom: -61px;
+        left: -30px;
     }
 }
 
@@ -666,8 +670,8 @@ h2 {
     top: -26px;
     left: 903px;
     i {
-        bottom: -37px;
-        left: -203px;
+        bottom: -41px;
+        left: -177px;
     }
 }
 
@@ -675,8 +679,8 @@ h2 {
     top: 65px;
     left: 1018px;
     i {
-        bottom: -48px;
-        left: -116px;
+        bottom: 5px;
+        left: -202px;
     }
 }
 
@@ -684,8 +688,8 @@ h2 {
     top: 172px;
     left: 1029px;
     i {
-        bottom: -4px;
-        left: -173px;
+        bottom: 35px;
+        left: -124px;
     }
 }
 
@@ -693,8 +697,8 @@ h2 {
     top: 267px;
     left: 999px;
     i {
-        bottom: 54px;
-        left: -186px;
+        bottom: 29px;
+        left: -240px;
     }
 }
 
@@ -702,8 +706,8 @@ h2 {
     top: 338px;
     left: 790px;
     i {
-        bottom: 89px;
-        left: -130px;
+        bottom: 58px;
+        left: -206px;
     }
 }
 
@@ -711,8 +715,8 @@ h2 {
     top: 322px;
     left: 621px;
     i {
-        bottom: 89px;
-        left: -127px;
+        bottom: 58px;
+        left: -107px;
     }
 }
 
@@ -720,8 +724,8 @@ h2 {
     top: 345px;
     left: 344px;
     i {
-        bottom: 85px;
-        left: 68px;
+        bottom: 34px;
+        left: 55px;
     }
 }
 
@@ -729,8 +733,8 @@ h2 {
     top: 246px;
     left: -88px;
     i {
-        bottom: -5px;
-        left: 76px;
+        bottom: 67px;
+        left: 47px;
     }
 }
 
@@ -738,8 +742,8 @@ h2 {
     top: 40px;
     left: -27px;
     i {
-        bottom: 19px;
-        left: 71px;
+        bottom: 15px;
+        left: 74px;
     }
 }
 
@@ -747,8 +751,8 @@ h2 {
     top: -42px;
     left: 78px;
     i {
-        bottom: -59px;
-        left: 62px;
+        bottom: -35px;
+        left: 91px;
     }
 }
 
@@ -756,8 +760,8 @@ h2 {
     top: -95px;
     left: 284px;
     i {
-        bottom: -59px;
-        left: 62px;
+        bottom: -40px;
+        left: 1px;
     }
 }
 
@@ -1121,6 +1125,30 @@ h2 {
     }
 }
 
+.works-before::before {
+    content: 'до';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    color: #FFFFFF;
+    position: absolute;
+    top: 15px;
+    left: 26px;
+    z-index: 3;
+}
+
+.works-after::after {
+    content: 'после';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    color: #FFFFFF;
+    position: absolute;
+    top: 15px;
+    right: 26px;
+    z-index: 3;
+}
+
 .works-slider-box {
     display: none;
 }
@@ -1344,9 +1372,16 @@ h2 {
     }
     .rem {
         position: static;
+        padding: 14px 28px 10px 28px;
         max-width: 210px;
         width: 100%;
         margin: 0 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        b {
+            display: block;
+            margin-bottom: 4px;
+        }
     }
     .slick-arrow {
         position: absolute;
@@ -1492,8 +1527,7 @@ M O B I L E
         margin-right: 0;
     }
     .about {
-        padding: 130px 0 130px 0;
-        background-size: contain;
+        padding: 80px 0 80px 0;
     }
 }
 
@@ -1827,30 +1861,17 @@ M O B I L E
     .rem {
         max-width: 100%;
         width: 100%;
-        padding: 19px;
+        padding: 11px 15px 11px 10px;
         margin-bottom: 20px;
+        br {
+            display: none;
+        }
     }
     .price {
         padding: 30px 0 0 0;
     }
     .price-box img {
         display: none;
-    }
-    .about h2 {
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 120%;
-        margin-bottom: 12px;
-    }
-    .about p {
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 150%;
-    }
-    .about {
-        padding: 92px 0 45px 0;
-        background-position: center 34px;
-        background-size: 89%;
     }
     .list-serv__item {
         width: 90.28%;
@@ -1903,6 +1924,36 @@ M O B I L E
     }
     .content-info__left {
         width: 100%;
+    }
+    .about {
+        padding: 54px 0 54px 0;
+        background-position: center top;
+    }
+    .about-box {
+        max-width: initial;
+        width: initial;
+        margin: 0 -4px;
+        padding: 22px 14px 34px 18px;
+    }
+    .about h2 {
+        text-align: left;
+        font-size: 24px;
+        line-height: 120%;
+        margin-bottom: 27px;
+    }
+    .about-box ul.about-ul li {
+        font-size: 14px;
+        line-height: 100%;
+        margin-bottom: 20px;
+        padding: 0 0 0 35px;
+    }
+    .about-box ul.about-ul li::before {
+        top: -3px;
+    }
+    .works-before::before,
+    .works-after::after {
+        font-size: 14px;
+        top: 10px;
     }
 }
 
