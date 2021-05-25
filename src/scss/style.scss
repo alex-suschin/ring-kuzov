@@ -302,6 +302,19 @@ select {
         background: #1D1954;
         color: #fff;
     }
+    .rem:hover {
+        background: #1D1954;
+        border-color: #1D1954;
+    }
+    .rem:hover b {
+        color: #fff;
+    }
+    .rem:hover button {
+        background: #fff;
+    }
+    .rem:hover button svg {
+        fill: #1D1954;
+    }
 }
 
 .header {
@@ -477,7 +490,7 @@ h2 {
 }
 
 .services-item {
-    padding: 40px 15px 15px 52px;
+    padding: 55px 15px 15px 52px;
     min-height: 242px;
     max-width: 340px;
     width: 100%;
@@ -506,7 +519,7 @@ h2 {
         font-size: 20px;
         line-height: 120%;
         color: #1D1954;
-        margin-bottom: 16px;
+        margin-bottom: 11px;
     }
     a {
         position: relative;
@@ -528,20 +541,47 @@ h2 {
 }
 
 .about {
-    background-color: #F6F6FB;
-    background-image: url(../img/ring-big.png);
     background-position: center;
     background-repeat: no-repeat;
-    padding: 218px 0 227px 0;
+    background-size: cover;
+    padding: 106px 0 101px 0;
     h2 {
-        margin-bottom: 20px;
+        margin-bottom: 29px;
         text-align: center;
     }
-    p {
-        max-width: 992px;
-        width: 100%;
-        margin: 0 auto;
-        text-align: center;
+}
+
+.about-box {
+    max-width: 746px;
+    width: 100%;
+    padding: 56px 68px 56px 68px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.87);
+    border-radius: 20px;
+    ul.about-ul {
+        margin-bottom: 0;
+        li {
+            position: relative;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 220%;
+            color: #1D1954;
+            padding: 0 0 0 46px;
+            margin-bottom: 1px;
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 8px;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                background: url(../img/galka.svg) no-repeat center;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 }
 
@@ -561,10 +601,13 @@ h2 {
 }
 
 .rem {
-    max-width: 182px;
-    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 220px;
+    width: fit-content;
     position: absolute;
-    padding: 18px 23px 17px 28px;
+    padding: 10px 20px 10px 12px;
     background: #FFFFFF;
     border: 1px solid #D1CEED;
     box-sizing: border-box;
@@ -572,7 +615,7 @@ h2 {
     b {
         display: block;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 13px;
         line-height: 120%;
         color: #1D1954;
     }
@@ -583,22 +626,36 @@ h2 {
         color: #1D1954;
     }
     i {
+        z-index: 5;
         position: absolute;
+    }
+    button {
+        display: block;
+        margin-right: 12px;
+        flex-shrink: 0;
+        width: 28px;
+        height: 28px;
+        background: #1D1954;
+        border-radius: 12px;
+        svg {
+            @include tr1;
+            fill: white;
+        }
     }
 }
 
 .rem1 {
-    top: -134px;
-    left: 364px;
+    top: -107px;
+    left: 467px;
     i {
-        bottom: -44px;
-        left: -32px;
+        bottom: -108px;
+        left: -68px;
     }
 }
 
 .rem2 {
-    top: -127px;
-    left: 617px;
+    top: -81px;
+    left: 686px;
     i {
         bottom: -46px;
         left: -27px;
@@ -606,8 +663,8 @@ h2 {
 }
 
 .rem3 {
-    top: -84px;
-    left: 870px;
+    top: -26px;
+    left: 903px;
     i {
         bottom: -37px;
         left: -203px;
@@ -615,8 +672,8 @@ h2 {
 }
 
 .rem4 {
-    top: 26px;
-    left: 1013px;
+    top: 65px;
+    left: 1018px;
     i {
         bottom: -48px;
         left: -116px;
@@ -624,8 +681,8 @@ h2 {
 }
 
 .rem5 {
-    top: 170px;
-    left: 1069px;
+    top: 172px;
+    left: 1029px;
     i {
         bottom: -4px;
         left: -173px;
@@ -633,8 +690,8 @@ h2 {
 }
 
 .rem6 {
-    top: 301px;
-    left: 877px;
+    top: 267px;
+    left: 999px;
     i {
         bottom: 54px;
         left: -186px;
@@ -642,8 +699,8 @@ h2 {
 }
 
 .rem7 {
-    top: 337px;
-    left: 589px;
+    top: 338px;
+    left: 790px;
     i {
         bottom: 89px;
         left: -130px;
@@ -651,8 +708,8 @@ h2 {
 }
 
 .rem8 {
-    top: 339px;
-    left: 247px;
+    top: 322px;
+    left: 621px;
     i {
         bottom: 89px;
         left: -127px;
@@ -660,8 +717,8 @@ h2 {
 }
 
 .rem9 {
-    top: 286px;
-    left: -14px;
+    top: 345px;
+    left: 344px;
     i {
         bottom: 85px;
         left: 68px;
@@ -669,8 +726,8 @@ h2 {
 }
 
 .rem10 {
-    top: 145px;
-    left: -84px;
+    top: 246px;
+    left: -88px;
     i {
         bottom: -5px;
         left: 76px;
@@ -678,8 +735,8 @@ h2 {
 }
 
 .rem11 {
-    top: 17px;
-    left: -49px;
+    top: 40px;
+    left: -27px;
     i {
         bottom: 19px;
         left: 71px;
@@ -687,8 +744,17 @@ h2 {
 }
 
 .rem12 {
-    top: -115px;
-    left: 107px;
+    top: -42px;
+    left: 78px;
+    i {
+        bottom: -59px;
+        left: 62px;
+    }
+}
+
+.rem13 {
+    top: -95px;
+    left: 284px;
     i {
         bottom: -59px;
         left: 62px;
